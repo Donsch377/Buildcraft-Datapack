@@ -3,9 +3,9 @@
     "place_barrel": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:barrel",
+        "block": "minecraft:dropper",
         "item": {
-          "items": "minecraft:barrel",
+          "items": "minecraft:dropper",
           "components": {
             "minecraft:custom_data": {
               "buildcraft_quarry": 1

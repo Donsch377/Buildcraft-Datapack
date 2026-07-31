@@ -1,5 +1,6 @@
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..512,sort=nearest,limit=1] run tag @s add buildcraft.finished
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..512,sort=nearest,limit=1] run tag @s remove buildcraft.quarry
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_start,distance=..512] run tag @s remove buildcraft.quarry_start
 kill @s
 kill @e[type=minecraft:item_display,tag=buildcraft.quarry_visual,distance=..512]
 particle minecraft:happy_villager ~ ~1 ~ 0.4 0.4 0.4 0.05 12 force
