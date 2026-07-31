@@ -1,9 +1,9 @@
 execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..1] run summon minecraft:marker ~ ~ ~ {Tags:["buildcraft.quarry"],CustomName:'{"text":"BuildCraft Quarry"}'}
-execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..1] run summon minecraft:marker ~-1 ~-1 ~-1 {Tags:["buildcraft.quarry_head"],CustomName:'{"text":"BuildCraft Quarry Head"}'}
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..1,sort=nearest,limit=1] run scoreboard players set @s bc_lane 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..1,sort=nearest,limit=1] run scoreboard players set @s bc_depth 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..1,sort=nearest,limit=1] run scoreboard players set @s bc_bedrock_count 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..1,sort=nearest,limit=1] run scoreboard players set @s bc_paused 0
+execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3] run summon minecraft:marker ~-1 ~-1 ~-1 {Tags:["buildcraft.quarry_head"],CustomName:'{"text":"BuildCraft Quarry Head"}'}
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_lane 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_depth 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_bedrock_count 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_paused 0
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_width 3
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_length 3
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_area 9
