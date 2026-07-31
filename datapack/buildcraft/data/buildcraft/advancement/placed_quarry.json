@@ -1,11 +1,11 @@
 {
   "criteria": {
-    "place_barrel": {
+    "place_quarry": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:dropper",
+        "block": "minecraft:lodestone",
         "item": {
-          "items": "minecraft:dropper",
+          "items": "minecraft:lodestone",
           "components": {
             "minecraft:custom_data": {
               "buildcraft_quarry": 1

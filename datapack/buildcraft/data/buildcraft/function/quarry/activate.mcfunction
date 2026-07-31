@@ -1,16 +1,24 @@
-execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..1] run summon minecraft:marker ~ ~ ~ {Tags:["buildcraft.quarry"],CustomName:'{"text":"BuildCraft Quarry"}'}
-execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3] run summon minecraft:marker ~-1 ~-1 ~-1 {Tags:["buildcraft.quarry_head"],CustomName:'{"text":"BuildCraft Quarry Head"}'}
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_lane 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_depth 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_bedrock_count 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_paused 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..3,sort=nearest,limit=1] run scoreboard players set @s bc_configured 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_width 3
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_length 3
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_area 9
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_row 0
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] run scoreboard players set @s bc_col 0
+# The quarry block is the machine anchor. The origin moves down one block after
+# every completed layer; the head scans only inside the configured rectangle.
+execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..1] run summon minecraft:marker ~0.5 ~0.5 ~0.5 {Tags:["buildcraft.quarry"],CustomName:'{"text":"BuildCraft Quarry"}'}
+kill @e[type=minecraft:marker,tag=buildcraft.quarry_head]
+kill @e[type=minecraft:marker,tag=buildcraft.quarry_origin]
+summon minecraft:marker ~-0.5 ~-0.5 ~-0.5 {Tags:["buildcraft.quarry_origin"],CustomName:'{"text":"BuildCraft Quarry Origin"}'}
+summon minecraft:marker ~-0.5 ~-0.5 ~-0.5 {Tags:["buildcraft.quarry_head"],CustomName:'{"text":"BuildCraft Quarry Head"}'}
+
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..2,sort=nearest,limit=1] run scoreboard players set @s bc_configured 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..2,sort=nearest,limit=1] run scoreboard players set @s bc_width 3
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..2,sort=nearest,limit=1] run scoreboard players set @s bc_length 3
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..2,sort=nearest,limit=1] run scoreboard players set @s bc_area 9
+
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_width 3
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_length 3
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_area 9
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_row 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_col 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_bedrock_count 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_depth 0
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_paused 0
+
 execute if block ~ ~1 ~ air run setblock ~ ~1 ~ minecraft:chest
-data merge block ~ ~ ~ {CustomName:'{"text":"BuildCraft Quarry","color":"gold"}'}
-execute unless entity @e[type=minecraft:item_display,tag=buildcraft.quarry_visual,distance=..1] run summon minecraft:item_display ~0.5 ~0.5 ~0.5 {item:{id:"minecraft:dropper",count:1,components:{"minecraft:item_model":"buildcraft:quarry"}},item_display:"fixed",transformation:{translation:[0.0f,0.0f,0.0f],scale:[0.82f,0.82f,0.82f],left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f]},Tags:["buildcraft.quarry_visual"]}
-tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Quarry deployed. The single chest above is the output. Four lapis markers will automatically expand the area.","color":"green"}]
+tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Quarry deployed. Its drops go into the chest above it. Place three Lapis Quarry Markers at three corners to resize it.","color":"green"}]
