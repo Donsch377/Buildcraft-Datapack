@@ -8,7 +8,7 @@ The datapack currently targets **Minecraft Java 26.3 Snapshot 6** and data-pack 
 
 ## Install
 
-1. Copy [`datapack/buildcraft`](datapack/buildcraft) into the `datapacks` folder of a Minecraft Java 26.3 Snapshot 5 world.
+1. Copy [`datapack/buildcraft`](datapack/buildcraft) into the `datapacks` folder of a Minecraft Java 26.3 Snapshot 6 world.
 2. Run `/reload`.
 3. Run `/function buildcraft:give` for the setup commands.
 
