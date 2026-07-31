@@ -1,27 +1,27 @@
-execute positioned ~-1 ~-1 ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~-1 ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~-1 ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~ ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~ ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~ ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~1 ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~1 ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~1 ~-1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~-1 ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~-1 ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~-1 ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~ ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~ ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~ ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~1 ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~1 ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~1 ~ if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~-1 ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~-1 ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~-1 ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~ ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~ ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~ ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~-1 ~1 ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~ ~1 ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
-execute positioned ~1 ~1 ~1 if data block ~ ~ ~ {Tags:["buildcraft.quarry"]} run function buildcraft:quarry/activate
+execute positioned ~-1 ~-1 ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~-1 ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~-1 ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~ ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~ ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~ ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~1 ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~1 ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~1 ~-1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~-1 ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~-1 ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~ ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~ ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~ ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~1 ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~1 ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~1 ~ if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~-1 ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~-1 ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~-1 ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~ ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~ ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~ ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~-1 ~1 ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~ ~1 ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
+execute positioned ~1 ~1 ~1 if block ~ ~ ~ minecraft:barrel run function buildcraft:quarry/mark_and_activate
