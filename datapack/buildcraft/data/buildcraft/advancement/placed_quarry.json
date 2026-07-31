@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "place_barrel": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:barrel"
+      }
+    }
+  },
+  "rewards": {
+    "function": "buildcraft:quarry/placed"
+  }
+}
