@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "L",
+    "S"
+  ],
+  "key": {
+    "L": "minecraft:lapis_lazuli",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "minecraft:soul_torch",
+    "count": 4,
+    "components": {
+      "minecraft:custom_name": {
+        "text": "Lapis Quarry Marker",
+        "color": "blue",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "Place as a landmark for BuildCraft",
+          "color": "gray",
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "buildcraft_marker": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "use_remote": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": "minecraft:compass",
+          "components": {
+            "minecraft:custom_data": {
+              "buildcraft": "quarry_remote"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "buildcraft:remote/use"
+  }
+}

@@ -1,1 +1,2 @@
-execute unless block ~ ~-1 ~ minecraft:bedrock run setblock ~ ~-1 ~ minecraft:air destroy
+execute if block ~ ~ ~ minecraft:bedrock run scoreboard players add @s bc_bedrock_count 1
+execute unless block ~ ~ ~ minecraft:bedrock run setblock ~ ~ ~ minecraft:air destroy

@@ -1,4 +1,4 @@
-# BuildCraft â€” datapacks only
+# BuildCraft — datapacks only
 
 BuildCraft is an experiment in recreating the spirit of BuildCraft using only Minecraft Java datapacks. The first milestone is a working quarry and a simple vanilla-block pipe connection.
 
@@ -13,7 +13,7 @@ BuildCraft now has two parts, following the same datapack-plus-resource-pack pat
 1. Copy [`datapack/buildcraft`](datapack/buildcraft) into the `datapacks` folder of a Minecraft Java 26.3 Snapshot 6 world.
 2. Copy [`resourcepack/buildcraft_assets`](resourcepack/buildcraft_assets) into `.minecraft/resourcepacks` and select it in the Resource Packs menu.
 3. Run `/reload` in the world.
-4. Run `/function buildcraft:give` for the Quarry block.
+4. Run `/function buildcraft:give` for the Quarry block and remote compass.
 
 The current test world uses `C:\\Users\\donsc\\AppData\\Roaming\\.minecraft\\saves\\New World\\datapacks` for the datapack.
 
@@ -25,7 +25,13 @@ Run `/function buildcraft:give`, then place the **BuildCraft Quarry** barrel whe
 - a hopper pipe one block east of the output chest;
 - an input chest one block above the hopper.
 
-Place items in the input chest and the hopper will move them into the output chest. The quarry mines one block every ten game ticks in a 3Ã—3 column, starting one block below the anchor, and sends nearby drops into the output chest. It stops after 32 layers.
+Place items in the input chest and the hopper will move them into the output chest. The quarry mines one block every ten game ticks in a 3×3 column, starting one block below the anchor, and sends nearby drops into the output chest. It moves the mining head down one layer at a time and stops when all nine blocks in a layer are bedrock.
+
+Recipes:
+
+- The Quarry recipe uses iron, redstone, a chest, and diamonds.
+- The Quarry Remote recipe creates the compass used to pause or resume a quarry by right-clicking its barrel.
+- The Lapis Quarry Marker recipe creates four blue soul-torch landmarks. Place them around a planned quarry area; right-clicking one with the remote highlights it and confirms the marker.
 
 Useful commands:
 
@@ -34,7 +40,7 @@ Useful commands:
 /function buildcraft:quarry/remove
 ```
 
-The current implementation is intentionally small and transparent. Future milestones can add fuel, selectable quarry sizes, visible custom pipe blocks, pause/resume controls, and safer block filters.
+The current implementation is intentionally small and transparent. Future milestones can add fuel, selectable quarry sizes, rectangular marker-bounded areas, and safer block filters.
 
 ## Layout
 
@@ -44,7 +50,7 @@ The current implementation is intentionally small and transparent. Future milest
         hopper pipe -> output chest
                          [quarry anchor]
                              |
-                         3Ã—3 mine area
+                         3×3 mine area
 ```
 
 ## License
