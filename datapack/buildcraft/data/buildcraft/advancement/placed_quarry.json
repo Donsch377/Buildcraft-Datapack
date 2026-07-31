@@ -3,7 +3,15 @@
     "place_barrel": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:barrel"
+        "block": "minecraft:barrel",
+        "item": {
+          "items": "minecraft:barrel",
+          "components": {
+            "minecraft:custom_data": {
+              "buildcraft_quarry": 1
+            }
+          }
+        }
       }
     }
   },
