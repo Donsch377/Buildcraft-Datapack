@@ -1,37 +1,32 @@
-# BuildCraft — datapacks only
+# BuildCraft - datapacks only
 
-BuildCraft is an experiment in recreating the spirit of BuildCraft using only Minecraft Java datapacks. The first milestone is a working quarry and a simple vanilla-block pipe connection.
+BuildCraft is an experiment in recreating the spirit of BuildCraft using only Minecraft Java datapacks. The first milestone is a working quarry with landmark-defined areas.
 
 ## Target version
 
-The datapack currently targets **Minecraft Java 26.3 Snapshot 6** and data-pack version **113.0**. Snapshots can change or corrupt worlds, so use a test world and keep backups.
+The datapack targets **Minecraft Java 26.3 Snapshot 6** and data-pack version **113.0**. Snapshots can change or corrupt worlds, so use a test world and keep backups.
 
 ## Install
 
-BuildCraft now has two parts, following the same datapack-plus-resource-pack pattern used by packs such as [Matcha Flavoured](https://modrinth.com/datapack/matcha-flavoured):
+BuildCraft has a datapack and a companion resource pack, following the same pattern used by packs such as [Matcha Flavoured](https://modrinth.com/datapack/matcha-flavoured):
 
-1. Copy [`datapack/buildcraft`](datapack/buildcraft) into the `datapacks` folder of a Minecraft Java 26.3 Snapshot 6 world.
+1. Copy [`datapack/buildcraft`](datapack/buildcraft) into the world's `datapacks` folder.
 2. Copy [`resourcepack/buildcraft_assets`](resourcepack/buildcraft_assets) into `.minecraft/resourcepacks` and select it in the Resource Packs menu.
 3. Run `/reload` in the world.
-4. Run `/function buildcraft:give` for the Quarry block and remote compass.
+4. Run `/function buildcraft:give` for the Quarry block.
 
-The current test world uses `C:\\Users\\donsc\\AppData\\Roaming\\.minecraft\\saves\\New World\\datapacks` for the datapack.
+The current test world uses `C:\Users\donsc\AppData\Roaming\.minecraft\saves\New World\datapacks` for the datapack.
 
 ## Quarry MVP
 
-Run `/function buildcraft:give`, then place the **BuildCraft Quarry** barrel where you want to mine. Because datapacks cannot add a truly new block, the placed anchor remains a vanilla barrel for block interaction and middle-click pickup; the selected resource pack changes its item and in-world display to a custom quarry texture. The two blocks above it and the two blocks east of it should be empty because placement creates:
+Run `/function buildcraft:give`, then place the **BuildCraft Quarry** dropper where you want to mine. Because datapacks cannot add a truly new block, the placed anchor remains a vanilla dropper for block interaction and middle-click pickup; the selected resource pack adds the custom quarry display over the machine-like base. Keep the block above it empty because placement creates one output chest above the quarry.
 
-- an output chest one block above the quarry anchor;
-- a hopper pipe one block east of the output chest;
-- an input chest one block above the hopper.
+The quarry mines one block every ten game ticks and sends every drop directly into that single chest. With no landmarks it mines a 3x3 area. Craft Lapis Quarry Markers and place exactly four on the same level at the corners of the desired area. A nearby quarry detects them automatically and scans the marked rectangle down to bedrock. The maximum width and length are 128 blocks.
 
-Place items in the input chest and the hopper will move them into the output chest. The quarry mines one block every ten game ticks in a 3×3 column, starting one block below the anchor, and sends nearby drops into the output chest. It moves the mining head down one layer at a time and stops when all nine blocks in a layer are bedrock.
+## Recipes
 
-Recipes:
-
-- The Quarry recipe uses iron, redstone, a chest, and diamonds.
-- The Quarry Remote recipe creates the compass used to pause or resume a quarry by right-clicking its barrel.
-- The Lapis Quarry Marker recipe creates four blue soul-torch landmarks. Place them around a planned quarry area; right-clicking one with the remote highlights it and confirms the marker.
+- Quarry: iron, redstone, a chest, and diamonds.
+- Lapis Quarry Marker: lapis lazuli and a stick, producing four blue soul torches.
 
 Useful commands:
 
@@ -40,17 +35,14 @@ Useful commands:
 /function buildcraft:quarry/remove
 ```
 
-The current implementation is intentionally small and transparent. Future milestones can add fuel, selectable quarry sizes, rectangular marker-bounded areas, and safer block filters.
-
 ## Layout
 
 ```text
-           input chest
-                |
-        hopper pipe -> output chest
+                         output chest
+                              |
                          [quarry anchor]
-                             |
-                         3×3 mine area
+                              |
+                         marked mine area
 ```
 
 ## License
