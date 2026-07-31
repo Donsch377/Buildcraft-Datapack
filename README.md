@@ -21,7 +21,7 @@ The current test world uses `C:\Users\donsc\AppData\Roaming\.minecraft\saves\New
 
 Run `/function buildcraft:give`, then place the **BuildCraft Quarry** dropper where you want to mine. Because datapacks cannot add a truly new block, the placed anchor remains a vanilla dropper for block interaction and middle-click pickup; the selected resource pack adds the custom quarry display over the machine-like base. Keep the block above it empty because placement creates one output chest above the quarry.
 
-The quarry mines one block every ten game ticks and sends every drop directly into that single chest. With no landmarks it mines a 3x3 area. Craft Lapis Quarry Markers and place exactly four on the same level at the corners of the desired area. A nearby quarry detects them automatically and scans the marked rectangle down to bedrock. The maximum width and length are 128 blocks.
+The quarry mines one block every ten game ticks and sends every drop directly into that single chest. With no landmarks it mines a 3x3 area. Craft Lapis Quarry Markers and place three or four on the same level at the corners of the desired area. A nearby quarry detects them automatically and scans the marked rectangle down to bedrock. The maximum width and length are 128 blocks.
 
 ## Recipes
 
