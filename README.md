@@ -15,6 +15,8 @@ BuildCraft now has two parts, following the same datapack-plus-resource-pack pat
 3. Run `/reload` in the world.
 4. Run `/function buildcraft:give` for the Quarry block.
 
+The current test world uses `C:\\Users\\donsc\\AppData\\Roaming\\.minecraft\\saves\\New World\\datapacks` for the datapack.
+
 ## Quarry MVP
 
 Run `/function buildcraft:give`, then place the **BuildCraft Quarry** barrel where you want to mine. Because datapacks cannot add a truly new block, the placed anchor remains a vanilla barrel for block interaction and middle-click pickup; the selected resource pack changes its item and in-world display to a custom quarry texture. The two blocks above it and the two blocks east of it should be empty because placement creates:
