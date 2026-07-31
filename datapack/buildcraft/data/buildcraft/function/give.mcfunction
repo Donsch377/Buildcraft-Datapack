@@ -1,0 +1,2 @@
+give @s minecraft:compass[custom_name='{"text":"BuildCraft Quarry Remote","color":"gold","italic":false}',lore=['{"text":"/function buildcraft:quarry/create","color":"gray","italic":false}','{"text":"/function buildcraft:quarry/remove","color":"gray","italic":false}'],custom_data={buildcraft:"quarry_remote"}]
+tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Stand at a clear quarry location, then run /function buildcraft:quarry/create.","color":"yellow"}]
