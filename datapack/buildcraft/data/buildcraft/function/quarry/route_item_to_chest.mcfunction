@@ -1,3 +1,6 @@
+# Prevent a second hidden quarry head from processing this same entity in
+# the current game tick. The tag is cleared at the start of the next tick.
+tag @s add buildcraft.route_cooldown
 tag @s remove buildcraft.inserted
 tag @s remove buildcraft.try
 data modify storage buildcraft:runtime routed_item set from entity @s Item

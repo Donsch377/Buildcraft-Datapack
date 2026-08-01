@@ -1,2 +1,2 @@
-advancement revoke @s only buildcraft:placed_marker
-tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Scanning the blue guide lines for a marker torch.","color":"aqua"}]
+# Marker placement is detected directly by buildcraft:marker/detect.
+# This file intentionally does not announce or scan every placed block.
