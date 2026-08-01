@@ -17,5 +17,6 @@ scoreboard objectives add bc_col dummy
 scoreboard objectives add bc_move dummy
 scoreboard objectives add bc_marker_count dummy
 scoreboard objectives add bc_configured dummy
+scoreboard objectives add bc_guide dummy
 scoreboard players set #clock bc_timer 0
 tellraw @a [{"text":"[BuildCraft] ","color":"gold"},{"text":"loaded. Run /function buildcraft:give for setup help.","color":"yellow"}]

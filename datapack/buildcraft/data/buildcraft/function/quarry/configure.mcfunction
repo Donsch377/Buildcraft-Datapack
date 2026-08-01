@@ -3,6 +3,8 @@ execute store result score @s bc_min_x run data get entity @s Pos[0] 1
 execute store result score @s bc_max_x run data get entity @s Pos[0] 1
 execute store result score @s bc_min_z run data get entity @s Pos[2] 1
 execute store result score @s bc_max_z run data get entity @s Pos[2] 1
+execute store result score @s bc_x run data get entity @s Pos[0] 1
+execute store result score @s bc_z run data get entity @s Pos[2] 1
 execute as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..256] store result score @s bc_x run data get entity @s Pos[0] 1
 execute as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..256] store result score @s bc_z run data get entity @s Pos[2] 1
 execute as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..256] if score @s bc_x < @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256,sort=nearest,limit=1] bc_min_x run scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256,sort=nearest,limit=1] bc_min_x = @s bc_x
@@ -10,6 +12,7 @@ execute as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..256] if sco
 execute as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..256] if score @s bc_z < @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256,sort=nearest,limit=1] bc_min_z run scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256,sort=nearest,limit=1] bc_min_z = @s bc_z
 execute as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..256] if score @s bc_z > @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256,sort=nearest,limit=1] bc_max_z run scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256,sort=nearest,limit=1] bc_max_z = @s bc_z
 execute as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..256] if score @s bc_x = @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256,sort=nearest,limit=1] bc_min_x run tag @s add buildcraft.quarry_min_x
+execute if score @s bc_x = @s bc_min_x run tag @s add buildcraft.quarry_min_x
 scoreboard players operation @s bc_width = @s bc_max_x
 scoreboard players operation @s bc_width -= @s bc_min_x
 scoreboard players add @s bc_width 1

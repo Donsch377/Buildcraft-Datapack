@@ -5,6 +5,8 @@ kill @e[type=minecraft:marker,tag=buildcraft.quarry_head]
 kill @e[type=minecraft:marker,tag=buildcraft.quarry_origin]
 summon minecraft:marker ~-0.5 ~-0.5 ~-0.5 {Tags:["buildcraft.quarry_origin"],CustomName:'{"text":"BuildCraft Quarry Origin"}'}
 summon minecraft:marker ~-0.5 ~-0.5 ~-0.5 {Tags:["buildcraft.quarry_head"],CustomName:'{"text":"BuildCraft Quarry Head"}'}
+kill @e[type=minecraft:interaction,tag=buildcraft.quarry_interaction,distance=..2]
+summon minecraft:interaction ~0.5 ~ ~0.5 {width:1.0f,height:1.0f,response:1b,Tags:["buildcraft.quarry_interaction"]}
 
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..2,sort=nearest,limit=1] run scoreboard players set @s bc_configured 0
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..2,sort=nearest,limit=1] run scoreboard players set @s bc_width 0
@@ -21,4 +23,4 @@ execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..4,sort=nearest,limit=1] run scoreboard players set @s bc_paused 1
 
 execute if block ~ ~1 ~ air run setblock ~ ~1 ~ minecraft:chest
-tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Quarry waiting. It is the fourth corner; place exactly three markers at the other corners.","color":"yellow"}]
+tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Quarry waiting. Follow the blue lines with two markers. Right-click the Quarry for status.","color":"yellow"}]

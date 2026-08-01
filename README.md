@@ -19,9 +19,9 @@ The current test world uses `C:\Users\donsc\AppData\Roaming\.minecraft\saves\New
 
 ## Quarry MVP
 
-Run `/function buildcraft:give` to receive a Quarry and three Lapis Quarry Markers. Keep the block above the Quarry empty because placement creates one output chest directly on top.
+Run `/function buildcraft:give` to receive a Quarry and two Lapis Quarry Markers. Keep the block above the Quarry empty because placement creates one output chest directly on top.
 
-Place exactly three markers at three corners of the rectangle, then place the Quarry at the fourth corner on the same level. The Quarry remains idle without all three markers. Once configured, it mines the complete rectangle, moves down one block, and repeats until it reaches a complete bedrock layer. Width and length are each limited to 64 blocks.
+Place the Quarry first. It projects blue guide lines; place the first marker on a guide, then follow the lines projected from that marker and place the second marker to lock the rectangle. The Quarry remains idle until both markers exist. Right-click the Quarry to see its state, marker count, boundary, size, and depth. Width and length are each limited to 64 blocks.
 
 This first stable prototype supports one active Quarry at a time. Run `/function buildcraft:quarry/remove` near it before moving the machine. If the output chest fills up, mining drops remain at the drill until there is room.
 
