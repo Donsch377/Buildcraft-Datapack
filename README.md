@@ -21,7 +21,7 @@ The current test world uses `C:\Users\donsc\AppData\Roaming\.minecraft\saves\New
 
 Run `/function buildcraft:give` to receive a Quarry and two Lapis Quarry Markers. Keep the block above the Quarry empty because placement creates one output chest directly on top.
 
-Place the Quarry first. It projects blue guide lines at the Quarry's level; place both markers on separate perpendicular lines from the Quarry to lock the rectangle. The Quarry remains idle until both markers exist. Right-click the Quarry to see its state, marker count, boundary, size, and depth. It mines only below the Quarry. Width and length are each limited to 64 blocks.
+Place the Quarry first. It projects four blue guide rays at the Quarry's level. Place exactly one marker torch directly on an X-axis ray and exactly one directly on a Z-axis ray. The pack scans those same rays for soul torches; torches beside a ray do not count. Those two coordinates define the opposite corners of the rectangle, which is then mined only below the Quarry. Right-click the Quarry to see the X/Z torch counts, boundary, size, and depth. Each guide ray is limited to 32 blocks.
 
 This first stable prototype supports one active Quarry at a time. Run `/function buildcraft:quarry/remove` near it before moving the machine. If the output chest fills up, mining drops remain at the drill until there is room.
 

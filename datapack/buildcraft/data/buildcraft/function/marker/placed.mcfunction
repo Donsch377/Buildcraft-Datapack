@@ -1,28 +1,2 @@
 advancement revoke @s only buildcraft:placed_marker
-execute positioned ~-1 ~-1 ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~-1 ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~-1 ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~ ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~ ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~ ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~1 ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~1 ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~1 ~-1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~-1 ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~-1 ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~ ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~ ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~ ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~1 ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~1 ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~1 ~ if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~-1 ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~-1 ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~-1 ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~ ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~ ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~ ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~-1 ~1 ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~ ~1 ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
-execute positioned ~1 ~1 ~1 if block ~ ~ ~ minecraft:soul_torch run function buildcraft:marker/mark
+tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Scanning the blue guide lines for a marker torch.","color":"aqua"}]
