@@ -1,7 +1,11 @@
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..8] at @s run kill @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512]
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..8] at @s run kill @e[type=minecraft:marker,tag=buildcraft.quarry_origin,distance=..512]
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..8] at @s run kill @e[type=minecraft:interaction,tag=buildcraft.quarry_interaction,distance=..8]
-execute as @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..8] run kill @s
-execute as @e[type=minecraft:marker,tag=buildcraft.finished,distance=..8] run kill @s
-kill @e[type=minecraft:item_display,tag=buildcraft.quarry_visual,distance=..512]
-tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Nearby quarry state removed. The quarry block and output chest were left in place.","color":"yellow"}]
+# This prototype allows one active quarry, so cleanup must also be global.
+# The old version searched only eight blocks around the player and could leave
+# a hidden anchor/head elsewhere blocking every new quarry.
+kill @e[type=minecraft:marker,tag=buildcraft.quarry_head]
+kill @e[type=minecraft:marker,tag=buildcraft.quarry_origin]
+kill @e[type=minecraft:interaction,tag=buildcraft.quarry_interaction]
+kill @e[type=minecraft:marker,tag=buildcraft.quarry]
+kill @e[type=minecraft:marker,tag=buildcraft.finished]
+kill @e[type=minecraft:marker,tag=buildcraft.marker]
+kill @e[type=minecraft:item_display,tag=buildcraft.quarry_visual]
+tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"All quarry state and landmark markers were cleared. Quarry blocks, chests, and soul torches were left in place; break and replace torches to register them again.","color":"yellow"}]
