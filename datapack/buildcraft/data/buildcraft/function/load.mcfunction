@@ -17,7 +17,6 @@ scoreboard objectives add bc_row dummy
 scoreboard objectives add bc_col dummy
 scoreboard objectives add bc_move dummy
 scoreboard objectives add bc_marker_count dummy
-scoreboard objectives add bc_item_count dummy
 scoreboard objectives add bc_inserted dummy
 scoreboard objectives add bc_configured dummy
 scoreboard objectives add bc_guide dummy
