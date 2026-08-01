@@ -21,7 +21,7 @@ The current test world uses `C:\Users\donsc\AppData\Roaming\.minecraft\saves\New
 
 Run `/function buildcraft:give` to receive a Quarry and three Lapis Quarry Markers. Keep the block above the Quarry empty because placement creates one output chest directly on top.
 
-For a custom area, place three markers first at three corners of the rectangle, like BuildCraft landmarks, then place the Quarry just outside that rectangle. The Quarry detects the markers automatically, mines the complete layer, moves down one block, and repeats until it reaches a complete bedrock layer. With no markers it mines a 3x3 area. Width and length are each limited to 64 blocks as an escape-safety guard.
+Place exactly three markers at three corners of the rectangle, then place the Quarry at the fourth corner on the same level. The Quarry remains idle without all three markers. Once configured, it mines the complete rectangle, moves down one block, and repeats until it reaches a complete bedrock layer. Width and length are each limited to 64 blocks.
 
 This first stable prototype supports one active Quarry at a time. Run `/function buildcraft:quarry/remove` near it before moving the machine. If the output chest fills up, mining drops remain at the drill until there is room.
 

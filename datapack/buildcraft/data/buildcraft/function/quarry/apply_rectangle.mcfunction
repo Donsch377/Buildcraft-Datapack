@@ -19,4 +19,4 @@ scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_orig
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry_origin,distance=..512,sort=nearest,limit=1] at @s run function buildcraft:quarry/move_origin_to_min_z
 execute at @e[type=minecraft:marker,tag=buildcraft.quarry_origin,distance=..512,sort=nearest,limit=1] run tp @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] ~ ~ ~
 scoreboard players set @s bc_configured 1
-tellraw @a[distance=..16] [{"text":"[BuildCraft] ","color":"gold"},{"text":"Three markers detected. Quarry resized to the marked rectangle.","color":"green"}]
+tellraw @a[distance=..16] [{"text":"[BuildCraft] ","color":"gold"},{"text":"Three marker corners detected. Quarry started as the fourth corner.","color":"green"}]
