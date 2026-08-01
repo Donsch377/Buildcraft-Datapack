@@ -1,5 +1,6 @@
 # Copy the rectangle state onto the moving head. The old implementation kept
 # these scores only on the stationary anchor, which caused the unbounded snake.
+kill @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin]
 scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] bc_width = @s bc_width
 scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] bc_length = @s bc_length
 scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] bc_area = @s bc_area
@@ -17,5 +18,10 @@ scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_orig
 scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_origin,distance=..512,sort=nearest,limit=1] bc_move -= @s bc_min_z
 execute as @e[type=minecraft:marker,tag=buildcraft.quarry_origin,distance=..512,sort=nearest,limit=1] at @s run function buildcraft:quarry/move_origin_to_min_z
 execute at @e[type=minecraft:marker,tag=buildcraft.quarry_origin,distance=..512,sort=nearest,limit=1] run tp @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] ~ ~ ~
+execute at @e[type=minecraft:marker,tag=buildcraft.quarry_min_x,distance=..256,sort=nearest,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["buildcraft.quarry_boundary_origin"]}
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin,distance=..512,sort=nearest,limit=1] store result score @s bc_z run data get entity @s Pos[2] 1
+scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin,distance=..512,sort=nearest,limit=1] bc_move = @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin,distance=..512,sort=nearest,limit=1] bc_z
+scoreboard players operation @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin,distance=..512,sort=nearest,limit=1] bc_move -= @s bc_min_z
+execute as @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin,distance=..512,sort=nearest,limit=1] at @s run function buildcraft:quarry/move_origin_to_min_z
 scoreboard players set @s bc_configured 1
 tellraw @a[distance=..16] [{"text":"[BuildCraft] ","color":"gold"},{"text":"Two markers detected. Quarry boundary locked and mining started.","color":"green"}]

@@ -3,6 +3,7 @@
 # a hidden anchor/head elsewhere blocking every new quarry.
 kill @e[type=minecraft:marker,tag=buildcraft.quarry_head]
 kill @e[type=minecraft:marker,tag=buildcraft.quarry_origin]
+kill @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin]
 kill @e[type=minecraft:interaction,tag=buildcraft.quarry_interaction]
 kill @e[type=minecraft:marker,tag=buildcraft.quarry]
 kill @e[type=minecraft:marker,tag=buildcraft.finished]

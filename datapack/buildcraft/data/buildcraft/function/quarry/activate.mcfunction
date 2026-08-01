@@ -3,6 +3,7 @@
 execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..1] run summon minecraft:marker ~0.5 ~0.5 ~0.5 {Tags:["buildcraft.quarry"],CustomName:'{"text":"BuildCraft Quarry"}'}
 kill @e[type=minecraft:marker,tag=buildcraft.quarry_head]
 kill @e[type=minecraft:marker,tag=buildcraft.quarry_origin]
+kill @e[type=minecraft:marker,tag=buildcraft.quarry_boundary_origin]
 summon minecraft:marker ~-0.5 ~-0.5 ~-0.5 {Tags:["buildcraft.quarry_origin"],CustomName:'{"text":"BuildCraft Quarry Origin"}'}
 summon minecraft:marker ~-0.5 ~-0.5 ~-0.5 {Tags:["buildcraft.quarry_head"],CustomName:'{"text":"BuildCraft Quarry Head"}'}
 kill @e[type=minecraft:interaction,tag=buildcraft.quarry_interaction,distance=..2]
