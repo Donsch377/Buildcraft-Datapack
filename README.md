@@ -19,14 +19,18 @@ The current test world uses `C:\Users\donsc\AppData\Roaming\.minecraft\saves\New
 
 ## Quarry MVP
 
-Run `/function buildcraft:give`, then place the **BuildCraft Quarry** dropper where you want to mine. Because datapacks cannot add a truly new block, the placed anchor remains a vanilla dropper for block interaction and middle-click pickup; the selected resource pack adds the custom quarry display over the machine-like base. Keep the block above it empty because placement creates one output chest above the quarry.
+Run `/function buildcraft:give` to receive a Quarry and two Lapis Quarry Markers. Keep the block above the Quarry empty because placement creates one output chest directly on top.
 
-The quarry mines one block every ten game ticks and sends every drop directly into that single chest. With no landmarks it mines a 3x3 area. Craft Lapis Quarry Markers and place three or four on the same level at the corners of the desired area. A nearby quarry detects them automatically and scans the marked rectangle down to bedrock. The maximum width and length are 128 blocks.
+Place the Quarry first. It projects four blue guide rays at the Quarry's level. Place exactly one marker torch directly on an X-axis ray and exactly one directly on a Z-axis ray. The pack scans those same rays for soul torches; torches beside a ray do not count. Those two coordinates define the opposite corners of the rectangle, which is then mined only below the Quarry. Right-click the Quarry to see the X/Z torch counts, boundary, size, and depth. Each guide ray is limited to 32 blocks.
+
+This first stable prototype supports one active Quarry at a time. Run `/function buildcraft:quarry/remove` near it before moving the machine. If the output chest fills up, mining drops remain at the drill until there is room.
+
+Datapacks cannot register a genuinely new block. The pack therefore reserves the vanilla lodestone as its Quarry base, and the resource pack replaces the lodestone block model with the Quarry texture. While the resource pack is enabled, ordinary lodestones also look like Quarry blocks.
 
 ## Recipes
 
 - Quarry: iron, redstone, a chest, and diamonds.
-- Lapis Quarry Marker: lapis lazuli and a stick, producing four blue soul torches.
+- Lapis Quarry Marker: lapis lazuli above a stick, producing two blue soul torches.
 
 Useful commands:
 

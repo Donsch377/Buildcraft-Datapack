@@ -1,0 +1,9 @@
+scoreboard players operation #status_min_x bc_min_x = @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..3,sort=nearest,limit=1] bc_min_x
+scoreboard players operation #status_max_x bc_max_x = @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..3,sort=nearest,limit=1] bc_max_x
+scoreboard players operation #status_min_z bc_min_z = @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..3,sort=nearest,limit=1] bc_min_z
+scoreboard players operation #status_max_z bc_max_z = @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..3,sort=nearest,limit=1] bc_max_z
+scoreboard players operation #status_width bc_width = @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..3,sort=nearest,limit=1] bc_width
+scoreboard players operation #status_length bc_length = @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..3,sort=nearest,limit=1] bc_length
+scoreboard players operation #status_depth bc_depth = @e[type=minecraft:marker,tag=buildcraft.quarry_head,distance=..512,sort=nearest,limit=1] bc_depth
+tellraw @s [{"text":"RUNNING","color":"green","bold":true},{"text":"  Size: ","color":"gray"},{"score":{"name":"#status_width","objective":"bc_width"},"color":"white"},{"text":" x ","color":"gray"},{"score":{"name":"#status_length","objective":"bc_length"},"color":"white"},{"text":"  Depth: ","color":"gray"},{"score":{"name":"#status_depth","objective":"bc_depth"},"color":"white"}]
+tellraw @s [{"text":"Boundary: X ","color":"gray"},{"score":{"name":"#status_min_x","objective":"bc_min_x"},"color":"aqua"},{"text":" to ","color":"dark_gray"},{"score":{"name":"#status_max_x","objective":"bc_max_x"},"color":"aqua"},{"text":", Z ","color":"gray"},{"score":{"name":"#status_min_z","objective":"bc_min_z"},"color":"aqua"},{"text":" to ","color":"dark_gray"},{"score":{"name":"#status_max_z","objective":"bc_max_z"},"color":"aqua"}]

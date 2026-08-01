@@ -12,7 +12,7 @@
     "D": "minecraft:diamond"
   },
   "result": {
-    "id": "minecraft:dropper",
+    "id": "minecraft:lodestone",
     "count": 1,
     "components": {
       "minecraft:custom_name": {
@@ -30,11 +30,7 @@
       "minecraft:custom_data": {
         "buildcraft_quarry": 1
       },
-      "minecraft:item_model": "buildcraft:quarry",
-      "minecraft:block_entity_data": {
-        "id": "minecraft:dropper",
-        "Tags": ["buildcraft.quarry"]
-      }
+      "minecraft:item_model": "buildcraft:quarry"
     }
   }
 }
