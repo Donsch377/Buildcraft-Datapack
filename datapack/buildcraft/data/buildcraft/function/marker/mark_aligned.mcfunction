@@ -1,3 +1,4 @@
-execute unless entity @e[type=minecraft:marker,tag=buildcraft.marker,distance=..1] run summon minecraft:marker ~0.5 ~0.5 ~0.5 {Tags:["buildcraft.marker"],CustomName:'{"text":"Lapis Quarry Marker"}'}
-particle minecraft:sonic_boom ~0.5 ~1 ~0.5 0 0 0 0 1 force
-tellraw @a[distance=..8] [{"text":"[BuildCraft] ","color":"gold"},{"text":"Lapis Quarry Marker placed. Follow the next blue line; two markers lock the boundary.","color":"aqua"}]
+execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256] run tellraw @s [{"text":"[BuildCraft] ","color":"gold"},{"text":"Place the Quarry first; this marker was not registered.","color":"red"}]
+execute unless entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256] run kill @e[type=minecraft:marker,tag=buildcraft.marker,distance=..1]
+execute if entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256] unless entity @e[type=minecraft:marker,tag=buildcraft.marker,distance=..1] run summon minecraft:marker ~0.5 ~0.5 ~0.5 {Tags:["buildcraft.marker"],CustomName:'{"text":"Lapis Quarry Marker"}'}
+execute if entity @e[type=minecraft:marker,tag=buildcraft.quarry,distance=..256] as @e[type=minecraft:marker,tag=buildcraft.marker,distance=..1,sort=nearest,limit=1] run function buildcraft:marker/validate_level

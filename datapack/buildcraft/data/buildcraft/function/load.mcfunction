@@ -9,6 +9,7 @@ scoreboard objectives add bc_min_z dummy
 scoreboard objectives add bc_max_z dummy
 scoreboard objectives add bc_x dummy
 scoreboard objectives add bc_z dummy
+scoreboard objectives add bc_y dummy
 scoreboard objectives add bc_width dummy
 scoreboard objectives add bc_length dummy
 scoreboard objectives add bc_area dummy

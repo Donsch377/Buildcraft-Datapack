@@ -10,7 +10,7 @@
   },
   "result": {
     "id": "minecraft:soul_torch",
-    "count": 4,
+    "count": 2,
     "components": {
       "minecraft:custom_name": {
         "text": "Lapis Quarry Marker",
